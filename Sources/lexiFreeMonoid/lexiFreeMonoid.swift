@@ -5,7 +5,7 @@ private func cartesian(xs:[String], ys:[String])-> [String] {
         }
     }
 }
-func lexiFreeMonoid(generator: [String])-> FlattenSequence<LazyMapSequence<(PartialRangeFrom<Int>), [String]>> {
+public func lexiFreeMonoid(generator: [String])-> FlattenSequence<LazyMapSequence<(PartialRangeFrom<Int>), [String]>> {
     return (1...).lazy.map { (n) -> [String] in
         var initial = [""]
         for _ in 0..<n {
